@@ -7,9 +7,39 @@
         <title>Trivia!</title>
 
         <script>
+        function main() {
 
-            // TODO: Add code to check answers to questions
+            q1.onsubmit = event => {
 
+                if (event.submitter.value == 2) {
+                    event.submitter.setAttribute('class', 'correct');
+                    document.querySelectorAll('#q1 button').forEach(element => element.disabled = true);
+                    q1_result.innerHTML = "Correct!";
+                }
+
+                else {
+                    event.submitter.setAttribute('class','incorrect');
+                    event.submitter.disabled = true;
+                    q1_result.innerHTML = "Incorrect";
+                }
+
+                return false;
+            }
+
+            q2.onsubmit = event => {
+                if (q2_input.value.trim().toUpperCase() === 'PELICAN') {
+                    q2_input.style.backgroundColor = 'green';
+                    q2_result.innerHTML = "Correct!";
+                }
+                else {
+                    q2_input.style.backgroundColor = 'red';
+                    q2_result.innerHTML = "Incorrect";
+                }
+                return false;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', main);
         </script>
 
     </head>
@@ -22,18 +52,29 @@
         <div class="container">
 
             <div class="section">
-                <h2>Part 1: Multiple Choice </h2>
+                <h2>Part 1: q1 Choice </h2>
                 <hr>
 
-                <!-- TODO: Add multiple choice question here -->
+                <h3>Which plant is a palm tree most closely related to?</h3>
+                <h3 id = "q1_result" class="result"></h3>
+                <form id="q1">
+                    <button value="1">Birch Tree</button>
+                    <button value="2">Grass</button>
+                    <button value="3">Sunflower</button>
+                    <button value="4">Blackberry Bush</button>
+                </form>
 
             </div>
 
             <div class="section">
                 <h2>Part 2: Free Response</h2>
                 <hr>
-
-                <!-- TODO: Add free response question here -->
+                <h3>What does "Alcatraz" mean in Spanish?</h3>
+                <h3 id = "q2_result" class="result"></h3>
+                <form id="q2">
+                    <input type="text" id="q2_input" placeholder="Enter answer here!" autocomplete="off">
+                    <button type="submit">Submit</button>
+                </form>
 
             </div>
 
