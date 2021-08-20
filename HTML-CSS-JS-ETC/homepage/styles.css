@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,500&display=swap');
+
+@counter-style cat-emojis {
+  system: cyclic;
+  symbols: "\1f49c" "\1F499" "\1F49A" "\1F49B";
+  suffix: " ";
+}
+
+.emoji-bullets {
+  list-style-type: cat-emojis;
+}
+
+body {
+    background-color: #4a455a;
+    color: #383340;
+}
+
+body::before {
+    content: "";
+    background-color: #4a455a;
+    background-image: url(./imgs/logo.gif);
+    background-size: 5rem;
+    background-blend-mode: darken;
+    background-position: center;
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+}
+
+.navbar-dark .navbar-brand {
+    color: #bb91f6;
+    font-size: 2rem;
+    font-family: Lora, sans-serif;
+}
+
+.navbar-dark .navbar-brand:focus, .navbar-dark .navbar-brand:hover {
+    color: #bb91f7;
+}
+
+.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
+    color: #bb91f6;
+}
+
+#content {
+    background: black;
+    border-radius: 0 0 .3rem .3rem;
+    padding-bottom: 20px;
+}
+
+.jumbotron {
+    background-color: #a898bf;
+    position: relative;
+    padding: 1rem 1rem;
+    text-align: center;
+    border-radius:0 0 .3rem .3rem;
+    margin-bottom: 1rem;
+}
+
+
+
+.h2, .h3, .h4, .h5, .h6, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+}
+
+.h1, h1 {
+    margin-bottom: 0;
+    font-family: 'Lora';
+    font-weight: 600;
+}
+
+.card {
+    max-width: 100%;
+    background-color: #a898bf;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.btn-primary {
+    color: #ffffffcf;
+    background-color: #343a40;
+    border-color: #343a40;
+}
+
+.btn-primary:hover {
+    color: #ffffffcf;
+    background-color: #ad86e4;
+    border-color: #383340;
+}
+
+.btn-primary.focus, .btn-primary:focus {
+    color: #ffffffcf;
+    background-color: #ad86e4;
+    border-color: #383340;
+    box-shadow: 0 0 0 0.2rem #ad86e4ad;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color: #ffffffcf;
+    background-color: #ad86e4;
+    border-color: #383340;
+}
+
+.btn-light {
+    color: #dad9dd;
+    background-color: #322f3c00;
+    border-color: #a898bf;
+}
+
+.btn-light:hover {
+    color: #dad9dd;
+    background-color: #0f0e128f;
+    border-color: #a898bf;
+}
+
+.btn-light:not(:disabled):not(.disabled).active, .btn-light:not(:disabled):not(.disabled):active, .show>.btn-light.dropdown-toggle {
+    color: #dad9dd;
+    background-color: #0f0e128f;
+    border-color: #a898bf;
+}
+
+.btn-light.focus, .btn-light:focus {
+    color: #dad9dd;
+    background-color: #322f3c00;
+    border-color: #a898bf;
+    box-shadow: 0 0 0 0.2rem rgb(216 217 219 / 14%);
+}
+
+#app-container {
+    position: relative;
+    background: #3b3748;
+    padding: 1rem 1rem;
+    color: #ffffffcf;
+    border-radius: .3rem;
+}
+
+.form-inline {
+    justify-content: space-evenly;
+}
+
+hr {
+    border-top: 1px solid #343a4080;
+}
+
+.hr-light {
+    border-top: 1px solid #a898bf80;
+}
+
+.img-frame {
+    min-height: 20vh;
+    background: #00000061;
+    border-radius: .3rem;
+    display: flex;
+    justify-content: center;
+    max-height: fit-content;
+    text-align: center;
+    align-items: center;
+}
+
+.framed-img {
+    max-width: 100%;
+    max-height: 75vh;
+}
+
+.custom-select:focus {
+    border-color: #383340;
+    box-shadow: 0 0 0 0.2rem #a898bf40;
+}
+
+#overlayTxt {
+    position: absolute;
+    bottom: 2rem;
+    color: #ffffff;
+    background: #25222d9c;
+    width: 80%;
+    border-radius: .3rem;
+    padding: .5rem;
+}
+
+.form-control:focus {
+    border-color: #383340;
+    box-shadow: 0 0 0 0.2rem #a898bf40;
+}
+
+@media (min-width: 576px) {
+    .jumbotron {
+        padding: 1rem 2rem;
+    }
+    .card {
+        max-width:100%;
+        margin-bottom: 15px;
+    }
+    body::before {
+        background-size: 5rem;
+    }
+    .form-inline .custom-select, .form-inline .input-group {
+    width: 40%;
+    }
+    .form-inline .form-control {
+    display: inline-block;
+    width: 30%;
+    vertical-align: middle;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .card {
+        max-width:33%;
+    }
+    body::before {
+        background-size: 8rem;
+    }
+}
+
+
