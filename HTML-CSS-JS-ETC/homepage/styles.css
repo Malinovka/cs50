@@ -18,8 +18,8 @@ body {
 body::before {
     content: "";
     background-color: #4a455a;
-    background-image: url(./imgs/logo.gif);
-    background-size: 5rem;
+    background-image: url(./imgs/bg.gif);
+    background-size: 7rem;
     background-blend-mode: darken;
     background-position: center;
     opacity: 0.2;
@@ -47,7 +47,6 @@ body::before {
 #content {
     background: black;
     border-radius: 0 0 .3rem .3rem;
-    padding-bottom: 20px;
 }
 
 .jumbotron {
@@ -58,8 +57,6 @@ body::before {
     border-radius:0 0 .3rem .3rem;
     margin-bottom: 1rem;
 }
-
-
 
 .h2, .h3, .h4, .h5, .h6, h2, h3, h4, h5, h6 {
     font-weight: 300;
@@ -74,6 +71,7 @@ body::before {
 .card {
     max-width: 100%;
     background-color: #a898bf;
+    margin-bottom: 15px;
 }
 
 .card-container {
@@ -167,7 +165,7 @@ hr {
 
 .framed-img {
     max-width: 100%;
-    max-height: 75vh;
+    max-height: 60vh;
 }
 
 .custom-select:focus {
@@ -190,16 +188,17 @@ hr {
     box-shadow: 0 0 0 0.2rem #a898bf40;
 }
 
+footer {
+    text-align: center;
+    position: relative;
+}
+
 @media (min-width: 576px) {
     .jumbotron {
         padding: 1rem 2rem;
     }
     .card {
         max-width:100%;
-        margin-bottom: 15px;
-    }
-    body::before {
-        background-size: 5rem;
     }
     .form-inline .custom-select, .form-inline .input-group {
     width: 40%;
@@ -215,9 +214,10 @@ hr {
 @media (min-width: 768px) {
     .card {
         max-width:33%;
+        margin-bottom: 0px;
     }
     body::before {
-        background-size: 8rem;
+        background-size: 12rem;
     }
 }
 
