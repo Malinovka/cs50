@@ -18,7 +18,7 @@ body {
 body::before {
     content: "";
     background-color: #4a455a;
-    background-image: url(./imgs/bg.gif);
+    background-image: url(../imgs/bg.gif);
     background-size: 7rem;
     background-blend-mode: darken;
     background-position: center;
@@ -217,6 +217,74 @@ hr {
 footer {
     text-align: center;
     position: relative;
+}
+
+.carousel-indicators {
+    bottom: 1rem;
+}
+
+.carousel-inner {
+    height: fit-content;
+    max-height: 100%;
+    display: flex;
+}
+
+.carousel-item {
+    max-width: 100%;
+    width: auto;
+    margin: 0;
+}
+
+.carousel-img {
+    width: auto;
+    max-height: 100%;
+    margin: auto;
+    width: auto !important;
+}
+.carousel-caption {
+    color: #ffffff;
+    background: #25222d9c;
+    width: 100%;
+    right: 0;
+    left: 0;
+    padding: 1rem 1rem 0rem 1rem;
+    bottom: 0;
+}
+
+@media (max-width: 767px) {
+    .carousel-caption {
+    padding: .5rem 1rem 0rem 1rem;
+    display: block !important;
+    }
+
+    .carousel-inner, .carousel-item {
+        height: fit-content;
+    }
+
+    .carousel-img {
+        max-width: 100%;
+    }
+
+    .carousel-caption {
+        position: relative;
+        background: #25222da8;
+        border: 1px solid #e0c9ea;
+        border-radius: 0 0 .3rem .3rem;
+    }
+
+    .carousel-caption h4 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 575px) {
+    h4 {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
 }
 
 @media (min-width: 375px) {
