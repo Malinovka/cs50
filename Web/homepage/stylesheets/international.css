@@ -1,0 +1,174 @@
+.map-container {
+    min-height: 20vh;
+    background: #00000061;
+    border-radius: .3rem;
+    display: flex;
+    justify-content: center;
+    max-height: fit-content;
+    text-align: center;
+    align-items: center;
+    position:relative;
+}
+
+#map {
+        max-width: 100%;
+        max-height: 60vh;
+}
+
+.mapMarker {
+    display: block;
+    position: absolute;
+    width: 6%;
+    height: 10%;
+    background: url(../imgs/map-marker.gif) no-repeat center/contain;
+    padding: 0;
+    border: none !important;
+    outline: none !important;
+}
+
+#United_States {
+    top: 36%;
+    left: 22%;
+}
+
+#Canada {
+    top: 21%;
+    left: 15%;
+}
+
+#South_America {
+    top: 65%;
+    left: 30%;
+}
+
+#United_Kingdom {
+    top: 20%;
+    left: 42%;
+}
+
+#Russia {
+    top: 13%;
+    left: 68%;
+}
+
+#China {
+    top: 30%;
+    left: 70%;
+}
+
+#Africa {
+    top: 45%;
+    left: 50%;
+}
+
+#Australia {
+    top: 67%;
+    left: 82%;
+}
+
+#catBox {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.modal-dialog, .modal-content {
+    display: contents;
+}
+
+.modal {
+    position: absolute;
+}
+
+#modalTitle {
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    padding: 0 1rem;
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #e0c9ea;
+    top: -.5rem;
+}
+
+button.close {
+    padding: 0 .5rem;
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    top: -1rem;
+}
+
+.close {
+    font-size: 2.5rem;
+    color: #e0c9ea;
+}
+
+.close:hover{
+    color: #e0c9ea;
+}
+
+button.close:focus {
+    outline: none;
+}
+
+#mapbuttons {
+        display: none;
+        padding: 0;
+        padding: 1% 0 0 0;
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+#mapbuttons .btn-light {
+    width: 100%;
+}
+
+#mapbuttons span {
+    width: 49%;
+    margin: .5%;
+}
+
+
+@media (max-width: 767px) {
+    .modal {
+        height: 70vh;
+        overflow-y: clip !important;
+    }
+
+    #catBox {
+        padding: 0;
+        height: auto;
+    }
+
+    #modalTitle {
+        position: fixed;
+        top: 6rem;
+        font-size: 2.5rem;
+        width: 100%;
+        background: #25222da8;
+    }
+
+    button.close {
+        position: fixed;
+        top: 0rem;
+        right: 1rem;
+        font-size: 4.5rem;
+    }
+
+    .mapMarker {
+        width: 9%;
+        height: 15%;
+    }
+}
+
+@media (max-width: 575px) {
+    #mapbuttons {
+        display: flex;
+    }
+}
+
